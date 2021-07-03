@@ -41,6 +41,13 @@ $(Package/ath11k-firmware-default)
   CATEGORY:=Firmware
 endef
 
+define Package/ath11k-firmware-qca9074
+$(Package/ath11k-firmware-default)
+  TITLE:=ath11k firmware for QCA9074 devices
+  SECTION:=firmware
+  CATEGORY:=Firmware
+endef
+
 define Build/Compile
 
 endef
@@ -72,6 +79,14 @@ define Package/ath11k-firmware-qca6390/install
 		$(1)/lib/firmware/QCA6390
 endef
 
+define Package/ath11k-firmware-qca9074/install
+	$(INSTALL_DIR) $(1)/lib/firmware/QCA9074
+	$(INSTALL_DATA) \
+		$(PKG_BUILD_DIR)/QCN9074/hw1.0/testing/2.4.0.1/WLAN.HK.2.4.0.1-01838-QCAHKSWPL_SILICONZ-1/* \
+		$(1)/lib/firmware/QCA9074
+endef
+
 $(eval $(call BuildPackage,ath11k-firmware-ipq6018))
 $(eval $(call BuildPackage,ath11k-firmware-ipq8074))
 $(eval $(call BuildPackage,ath11k-firmware-qca6390))
+$(eval $(call BuildPackage,ath11k-firmware-qca9074))
