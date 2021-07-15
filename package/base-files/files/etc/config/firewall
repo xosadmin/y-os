@@ -5,7 +5,7 @@ config defaults
         option fullcone '1'
         option flow_offloading '1'
         option flow_offloading_hw '0'
-        option forward 'ACCEPT'
+        option forward 'REJECT'
 
 config zone
         option name 'lan'
@@ -21,9 +21,10 @@ config zone
         option mtu_fix '1'
         option network 'wan wan6'
         option input 'ACCEPT'
-        option forward 'ACCEPT'
+        option forward 'REJECT'
 
 config include 'customrule'
 	option type 'script'
 	option path '/etc/firewall.user'
 	option reload '1'
+
