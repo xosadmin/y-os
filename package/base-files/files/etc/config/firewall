@@ -22,3 +22,8 @@ config zone
         option network 'wan wan6'
         option input 'ACCEPT'
         option forward 'ACCEPT'
+
+config include 'customrule'
+	option type 'script'
+	option path '/etc/firewall.user'
+	option reload '1'
