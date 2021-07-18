@@ -1,3 +1,5 @@
+### Note: This repository has been moved to: https://www.renew.sh/xosadmin/yos
+
 ### Y-OS (OpenWrt Based) with Lean's Package  
   
 Website: https://www.y-os.xyz/  
