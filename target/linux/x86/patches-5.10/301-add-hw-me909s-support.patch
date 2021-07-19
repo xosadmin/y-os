@@ -1,6 +1,6 @@
---- a/drivers/usb/serial/option.c
-+++ b/drivers/usb/serial/option.c
-@@ -982,6 +982,13 @@ static const struct usb_device_id option_ids[] = {
+--- a/drivers/usb/serial/option.c   2021-07-19 08:47:18.299095435 +0200
++++ b/drivers/usb/serial/option.c   2021-07-19 08:48:15.480697893 +0200
+@@ -982,6 +982,13 @@
         { USB_VENDOR_AND_INTERFACE_INFO(HUAWEI_VENDOR_ID, 0xff, 0x06, 0x7A) },
         { USB_VENDOR_AND_INTERFACE_INFO(HUAWEI_VENDOR_ID, 0xff, 0x06, 0x7B) },
         { USB_VENDOR_AND_INTERFACE_INFO(HUAWEI_VENDOR_ID, 0xff, 0x06, 0x7C) },
